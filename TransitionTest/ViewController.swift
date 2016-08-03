@@ -23,7 +23,7 @@ class ViewController: UITableViewController {
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     
-    @IBAction func togglePressed(_ sender: AnyObject) {
+    @IBAction func togglePressed(sender: AnyObject) {
         
         
         if !self.bottomConstraint.isActive
