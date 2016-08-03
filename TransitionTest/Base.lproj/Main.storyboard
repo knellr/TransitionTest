@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="NO" initialViewController="H2o-lk-BCq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H2o-lk-BCq">
     <dependencies>
         <deployment identifier="iOS"/>
         <development version="7000" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -12,11 +12,11 @@
             <objects>
                 <tableViewController id="H2o-lk-BCq" customClass="ViewController" customModule="TransitionTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="574" sectionHeaderHeight="28" sectionFooterHeight="28" id="P40-C5-dmb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kVV-4q-KYN">
-                            <rect key="frame" x="0.0" y="574" width="600" height="30"/>
+                            <rect key="frame" x="0.0" y="574" width="375" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Toggle"/>
                             <connections>
@@ -27,24 +27,24 @@
                             <tableViewSection id="g86-yU-h6N">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="574" id="6Jl-Sd-In1">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="574"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Jl-Sd-In1" id="3e7-m8-Qbh">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="573.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98T-Gm-ZVh">
-                                                    <rect key="frame" x="18" y="18" width="339" height="537.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98T-Gm-ZVh">
+                                                    <rect key="frame" x="18" y="18" width="339" height="538"/>
                                                     <subviews>
-                                                        <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAA-7P-f79">
-                                                            <rect key="frame" x="8" y="10" width="323" height="517.5"/>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAA-7P-f79">
+                                                            <rect key="frame" x="8" y="10" width="323" height="518"/>
                                                             <subviews>
-                                                                <view hidden="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZ0-qA-V4p" customClass="View1" customModule="TransitionTest" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="517.5"/>
+                                                                <view hidden="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="TZ0-qA-V4p" customClass="View1" customModule="TransitionTest" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="518"/>
                                                                     <color key="backgroundColor" red="0.42757904529571533" green="0.49731630086898804" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </view>
-                                                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HoX-MN-89s" customClass="View2" customModule="TransitionTest" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="517.5"/>
+                                                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="HoX-MN-89s" customClass="View2" customModule="TransitionTest" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="518"/>
                                                                     <color key="backgroundColor" red="1" green="0.86133110523223877" blue="0.57422512769699097" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </view>
                                                             </subviews>
@@ -87,6 +87,7 @@
                             <outlet property="delegate" destination="H2o-lk-BCq" id="yvX-f2-Lx3"/>
                         </connections>
                     </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bottomConstraint" destination="nJQ-A8-ukQ" id="BrU-Lb-JMj"/>
                         <outlet property="bottomConstraint2" destination="Gsu-e7-P4j" id="RIr-Ln-glx"/>

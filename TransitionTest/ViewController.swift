@@ -26,48 +26,50 @@ class ViewController: UITableViewController {
     @IBAction func togglePressed(sender: AnyObject) {
         
         
-        if !self.bottomConstraint.isActive
+        if !self.bottomConstraint.active
         {
-            NSLayoutConstraint.activate([self.bottomConstraint])
-            NSLayoutConstraint.deactivate([self.bottomConstraint2])
-            self.view1.isHidden = false
-            self.view2.isHidden = true
+            NSLayoutConstraint.activateConstraints([self.bottomConstraint])
+            NSLayoutConstraint.deactivateConstraints([self.bottomConstraint2])
+            self.view1.hidden = false
+            self.view2.hidden = true
         }
         else
         {
-            NSLayoutConstraint.deactivate([self.bottomConstraint])
-            NSLayoutConstraint.activate([self.bottomConstraint2])
-            self.view1.isHidden = true
-            self.view2.isHidden = false
+            NSLayoutConstraint.deactivateConstraints([self.bottomConstraint])
+            NSLayoutConstraint.activateConstraints([self.bottomConstraint2])
+            self.view1.hidden = true
+            self.view2.hidden = false
         }
         
-        UIView.transition(with: containerView,
-                          duration: 0.8,
-                          options: [UIViewAnimationOptions.transitionCrossDissolve, UIViewAnimationOptions.layoutSubviews],
+        UIView.transitionWithView(containerView,
+                          duration: 0.3,
+                          options: [UIViewAnimationOptions.TransitionCrossDissolve, UIViewAnimationOptions.LayoutSubviews],
                           animations: {
                             
                             self.view.setNeedsLayout()
                             self.view.layoutIfNeeded()
-                            self.tableView.beginUpdates()
-                            self.tableView.endUpdates()
         }, completion: nil)
+        
+        
+        self.tableView.beginUpdates()
+        self.tableView.endUpdates()
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
 }
 
 class View1: UIView
 {
-    override var intrinsicContentSize: CGSize {
+    override func intrinsicContentSize() -> CGSize {
         return CGSize(width: UIViewNoIntrinsicMetric, height: 200)
     }
 }
 
 class View2: UIView
 {
-    override var intrinsicContentSize: CGSize {
+    override func intrinsicContentSize() -> CGSize {
         return CGSize(width: UIViewNoIntrinsicMetric, height: 100)
     }
 }
