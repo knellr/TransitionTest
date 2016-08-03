@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H2o-lk-BCq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="NVC-G5-1J7">
+            <objects>
+                <tableViewController id="H2o-lk-BCq" customClass="ViewController" customModule="TransitionTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="574" sectionHeaderHeight="28" sectionFooterHeight="28" id="P40-C5-dmb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kVV-4q-KYN">
+                            <frame key="frameInset" minY="574" width="375" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Toggle"/>
+                            <connections>
+                                <action selector="togglePressed:" destination="H2o-lk-BCq" eventType="touchUpInside" id="zbw-yW-vzh"/>
+                            </connections>
+                        </button>
+                        <sections>
+                            <tableViewSection id="g86-yU-h6N">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="574" id="6Jl-Sd-In1">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Jl-Sd-In1" id="3e7-m8-Qbh">
+                                            <frame key="frameInset" width="375" height="573"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98T-Gm-ZVh">
+                                                    <subviews>
+                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAA-7P-f79">
+                                                            <subviews>
+                                                                <view hidden="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="TZ0-qA-V4p" customClass="View1" customModule="TransitionTest" customModuleProvider="target">
+                                                                    <color key="backgroundColor" red="0.35215066830000002" green="0.39239460999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="HoX-MN-89s" customClass="View2" customModule="TransitionTest" customModuleProvider="target">
+                                                                    <color key="backgroundColor" red="1" green="0.83424113730000005" blue="0.5038338859" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.74509805439999999" green="0.15686275059999999" blue="0.074509806930000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="TZ0-qA-V4p" secondAttribute="trailing" id="4ie-xP-lpV"/>
+                                                                <constraint firstItem="TZ0-qA-V4p" firstAttribute="top" secondItem="NAA-7P-f79" secondAttribute="top" id="GLr-f8-4KG"/>
+                                                                <constraint firstAttribute="bottom" secondItem="HoX-MN-89s" secondAttribute="bottom" id="Gsu-e7-P4j"/>
+                                                                <constraint firstItem="HoX-MN-89s" firstAttribute="leading" secondItem="NAA-7P-f79" secondAttribute="leading" id="JLe-Df-ieu"/>
+                                                                <constraint firstAttribute="trailing" secondItem="HoX-MN-89s" secondAttribute="trailing" id="Jmv-cn-WUJ"/>
+                                                                <constraint firstItem="TZ0-qA-V4p" firstAttribute="leading" secondItem="NAA-7P-f79" secondAttribute="leading" id="LGg-Yy-Xjd"/>
+                                                                <constraint firstItem="HoX-MN-89s" firstAttribute="top" secondItem="NAA-7P-f79" secondAttribute="top" id="YoX-vR-Z2u"/>
+                                                                <constraint firstAttribute="bottom" secondItem="TZ0-qA-V4p" secondAttribute="bottom" id="nJQ-A8-ukQ"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="NAA-7P-f79" firstAttribute="top" secondItem="98T-Gm-ZVh" secondAttribute="top" constant="10" id="ifT-4f-HrS"/>
+                                                        <constraint firstAttribute="leadingMargin" secondItem="NAA-7P-f79" secondAttribute="leading" id="s2d-MZ-REH"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NAA-7P-f79" secondAttribute="bottom" constant="10" id="tco-Li-Kom"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="NAA-7P-f79" secondAttribute="trailing" id="wB8-h1-nRr"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.35215066830000002" green="0.39239460999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="98T-Gm-ZVh" secondAttribute="bottom" constant="10" id="Ab8-bY-PrR"/>
+                                                <constraint firstItem="98T-Gm-ZVh" firstAttribute="top" secondItem="3e7-m8-Qbh" secondAttribute="topMargin" constant="10" id="Smz-iP-IEd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="98T-Gm-ZVh" secondAttribute="trailing" constant="10" id="r8L-Yb-hMh"/>
+                                                <constraint firstItem="98T-Gm-ZVh" firstAttribute="leading" secondItem="3e7-m8-Qbh" secondAttribute="leadingMargin" constant="10" id="shB-M4-yPl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="H2o-lk-BCq" id="mp7-Is-BST"/>
+                            <outlet property="delegate" destination="H2o-lk-BCq" id="yvX-f2-Lx3"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="nJQ-A8-ukQ" id="BrU-Lb-JMj"/>
+                        <outlet property="bottomConstraint2" destination="Gsu-e7-P4j" id="RIr-Ln-glx"/>
+                        <outlet property="containerView" destination="NAA-7P-f79" id="f9D-hb-syv"/>
+                        <outlet property="view1" destination="TZ0-qA-V4p" id="Hd1-eh-7RX"/>
+                        <outlet property="view2" destination="HoX-MN-89s" id="mhZ-dO-oaW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9j6-TY-htk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-922.39999999999998" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+</document>
