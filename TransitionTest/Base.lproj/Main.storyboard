@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H2o-lk-BCq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H2o-lk-BCq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <development version="7000" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,10 +13,11 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="574" sectionHeaderHeight="28" sectionFooterHeight="28" id="P40-C5-dmb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kVV-4q-KYN">
-                            <frame key="frameInset" minY="574" width="375" height="30"/>
+                            <rect key="frame" x="0.0" y="574" width="375" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <state key="normal" title="Toggle"/>
                             <connections>
                                 <action selector="togglePressed:" destination="H2o-lk-BCq" eventType="touchUpInside" id="zbw-yW-vzh"/>
@@ -28,15 +29,16 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="574" id="6Jl-Sd-In1">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Jl-Sd-In1" id="3e7-m8-Qbh">
-                                            <frame key="frameInset" width="375" height="574"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Jl-Sd-In1" id="3e7-m8-Qbh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98T-Gm-ZVh" customClass="View" customModule="TransitionTest" customModuleProvider="target">
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="18" y="18" width="339" height="538"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.42757904529571533" green="0.49731630086898804" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.42757904529571533" green="0.49731630086898804" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="98T-Gm-ZVh" secondAttribute="bottom" constant="10" id="Ab8-bY-PrR"/>
                                                 <constraint firstItem="98T-Gm-ZVh" firstAttribute="top" secondItem="3e7-m8-Qbh" secondAttribute="topMargin" constant="10" id="Smz-iP-IEd"/>
@@ -44,7 +46,7 @@
                                                 <constraint firstItem="98T-Gm-ZVh" firstAttribute="leading" secondItem="3e7-m8-Qbh" secondAttribute="leadingMargin" constant="10" id="shB-M4-yPl"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="1" green="0.83424113730000005" blue="0.5038338859" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.86133110523223877" blue="0.57422512769699097" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -54,6 +56,7 @@
                             <outlet property="delegate" destination="H2o-lk-BCq" id="yvX-f2-Lx3"/>
                         </connections>
                     </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="flexibleView" destination="98T-Gm-ZVh" id="ZD1-I8-xj7"/>
                     </connections>

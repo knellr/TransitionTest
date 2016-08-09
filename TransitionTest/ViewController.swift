@@ -19,27 +19,22 @@ class ViewController: UITableViewController {
 
     @IBOutlet weak var flexibleView: View!
     
-    @IBAction func togglePressed(_ sender: AnyObject) {
-        
+    @IBAction func togglePressed(sender: AnyObject) {
         
         flexibleView.height = flexibleView.height == CGFloat(200) ? CGFloat(300) : CGFloat(200)
-        
-        UIView.transition(with: flexibleView,
-                          duration: 0.3,
-                          options: [UIViewAnimationOptions.transitionCrossDissolve, UIViewAnimationOptions.layoutSubviews],
-                          animations: {
-                            
-            self.view.setNeedsLayout()
-            self.view.layoutIfNeeded()
-        }, completion: nil)
-        
-        
+        UIView.animateWithDuration(0.3) {
+            self.flexibleView.layoutIfNeeded()
+        }
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt heightForRowAtIndexPath: IndexPath) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 44
     }
 }
 
@@ -51,7 +46,7 @@ class View: UIView
         }
     }
     
-    override var intrinsicContentSize: CGSize {
+    override func intrinsicContentSize() -> CGSize {
         return CGSize(width: UIViewNoIntrinsicMetric, height: height)
     }
 }
